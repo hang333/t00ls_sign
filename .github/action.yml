@@ -1,0 +1,30 @@
+name: 'T00ls Sign'
+
+on:
+  push:
+    branches: 
+      - master
+  schedule:
+    - cron: '0 17 * * *'
+
+jobs:
+  get_points:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'Checkout codes'
+      uses: actions/checkout@v2
+    - name: 'Set python'
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
+    - name: 'Install dependencies'
+      run: python -m pip install --upgrade requests
+    - name: 'T00ls Sign'
+      env:
+        T00LS_USERNAME: ${{ secrets.T00LS_USERNAME }}
+        T00LS_PASSWORD: ${{ secrets.T00LS_PASSWORD }}
+        T00LS_MD5: ${{ secrets.T00LS_MD5 }}
+        T00LS_QID: ${{ secrets.T00LS_QID }}
+        T00LS_QANS: ${{ secrets.T00LS_QANS }}
+        T00LS_SCKEY: ${{ secrets.T00LS_SCKEY }}
+      run: python t00ls_sign.py
