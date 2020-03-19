@@ -8,7 +8,7 @@ Fork 本仓库，然后点击你的仓库右上角的 Settings，找到 Secrets 
 
 
 
-其中 `T00LS_USERNAME` 存放你在 T00ls 的帐户名，`T00LS_PASSWORD` 存放你的帐户密码， `T00LS_MD5` 在存放的密码是 md5 时设置为 `True`， `T00LS_QID` 存放你的登录问题ID，`T00LS_QANS` 存放你的登录问题答案， `SCKEY` 则存放Server酱申请的skey。
+其中 `T00LS_USERNAME` 存放你在 T00ls 的帐户名，`T00LS_PASSWORD` 存放你的帐户密码， `T00LS_MD5` 在存放的密码是 md5 时设置为 `True`， `T00LS_QID` 存放你的登录问题ID，`T00LS_QANS` 存放你的登录问题答案， `T00LS_SCKEY` 则存放Server酱申请的skey。
 
 设置好环境变量后点击你的仓库上方的 Actions 选项，会打开一个如下的页面，点击 `I understand...` 按钮确认在 Fork 的仓库上启用 GitHub Actions 。
 
