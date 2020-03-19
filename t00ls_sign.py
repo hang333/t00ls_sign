@@ -7,6 +7,7 @@ import requests
 import re #正则模块
 import time
 import hashlib
+import os
 
 
 headers = {

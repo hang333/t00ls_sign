@@ -8,7 +8,7 @@ on:
     - cron: '0 17 * * *'
 
 jobs:
-  get_points:
+  t00ls_sign:
     runs-on: ubuntu-latest
     steps:
     - name: 'Checkout codes'
