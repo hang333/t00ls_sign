@@ -29,7 +29,7 @@ url_signin = 'https://www.t00ls.net/ajax-sign.json'
 
 username = os.environ['T00LS_USERNAME'] # 用户名
 password = os.environ['T00LS_PASSWORD']  # 明文密码或密码MD5
-password_hash = ("T00LS_MD5" in os.environ) and True or False  # 密码为md5时设置为True
+password_hash = ("T00LS_MD5" in os.environ) and os.environ['T00LS_MD5']=='True' or False  # 密码为md5时设置为True
 questionid = ("T00LS_QID" in os.environ) and os.environ['T00LS_QID'] or ''  # 问题ID，参考上面注释，没有可不填
 answer = ("T00LS_QANS" in os.environ) and os.environ['T00LS_QANS'] or ''   # 问题答案，没有可不填
 SCKEY = ("T00LS_SCKEY" in os.environ) and os.environ['T00LS_SCKEY'] or '' #Server酱申请的skey
