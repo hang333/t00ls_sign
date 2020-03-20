@@ -66,8 +66,8 @@ def login_t00ls(session):
 
     censored_data = data
     censored_data['password'] = '***'
-    print(data)
-    
+    print(censored_data)
+
     headers['Content-Type'] = 'application/x-www-form-urlencoded'
     headers['Accept'] = 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
     headers['Referer'] = 'https://www.t00ls.net/login.html'
