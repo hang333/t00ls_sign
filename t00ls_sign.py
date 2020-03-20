@@ -64,7 +64,7 @@ def login_t00ls(session):
         'cookietime': '2592000'
     }
 
-    censored_data = data
+    censored_data = data.copy()
     censored_data['password'] = '***'
     print(censored_data)
 
