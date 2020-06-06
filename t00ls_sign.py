@@ -34,7 +34,6 @@ logindata = {
 }
 
 rlogin = requests.post('https://www.t00ls.net/login.json', data = logindata)
-print(today.date())
 rlogj = json.loads(rlogin.text)
 if (rlogj["status"] != "success"):
   print("登入失败，请检查输入资料是否正确！")
