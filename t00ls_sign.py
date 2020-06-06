@@ -14,7 +14,7 @@ qan = ("T00LS_QANS" in os.environ) and os.environ['T00LS_QANS'] or '' #安全提
 SCKEY = ("T00LS_SCKEY" in os.environ) and os.environ['T00LS_SCKEY'] or '' #Server酱申请的skey
 
 if not password_hash:
-    pswd = hashlib.md5(password.encode('utf-8')).hexdigest()
+    pswd = hashlib.md5(pswd.encode('utf-8')).hexdigest()
 
 # 0 = 没有安全提问
 # 1 = 母亲的名字
