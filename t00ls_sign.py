@@ -45,7 +45,7 @@ signdata = {
 }
 rsign = requests.post('https://www.t00ls.net/ajax-sign.json', data = signdata, cookies = tscookie)
 rsinj = json.loads(rsign.text)
-datamsg={"text":"T00ls签到成功！","desp":rsinj.text}
+datamsg={"text":"T00ls签到成功！","desp":rsign.text}
 if (rsinj["status"] == "success"):
   print("签到成功！")
   if(SCKEY != ''):
