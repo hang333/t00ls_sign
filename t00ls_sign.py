@@ -4,6 +4,7 @@
 import requests
 import json
 import hashlib
+import os
 
 uname = os.environ['T00LS_USERNAME'] # 用户名
 pswd = os.environ['T00LS_PASSWORD']  # 明文密码或密码MD5
