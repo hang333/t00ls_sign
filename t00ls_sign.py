@@ -33,7 +33,7 @@ logindata = {
   'answer': qan
 }
 
-rlogin = requests.post('https://www.t00ls.net/login.json', data = logindata)
+rlogin = requests.post('https://www.t00ls.cc/login.json', data = logindata)
 rlogj = json.loads(rlogin.text)
 if (rlogj["status"] != "success"):
   print("登入失败，请检查输入资料是否正确！")
@@ -43,7 +43,7 @@ signdata = {
   'formhash': rlogj["formhash"],
   'signsubmit': "true"
 }
-rsign = requests.post('https://www.t00ls.net/ajax-sign.json', data = signdata, cookies = tscookie)
+rsign = requests.post('https://www.t00ls.cc/ajax-sign.json', data = signdata, cookies = tscookie)
 rsinj = json.loads(rsign.text)
 datamsg={"text":"T00ls签到成功！","desp":rsign.text}
 if (rsinj["status"] == "success"):
