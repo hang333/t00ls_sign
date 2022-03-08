@@ -43,7 +43,7 @@ signdata = {
   'formhash': rlogj["formhash"],
   'signsubmit': "true"
 }
-rsign = requests.post('https://www.t00ls.cc/ajax-sign.json', data = signdata, cookies = tscookie)
+rsign = requests.post('https://www.t00ls.com/ajax-sign.json', data = signdata, cookies = tscookie)
 rsinj = json.loads(rsign.text)
 datamsg={"text":"T00ls签到成功！","desp":rsign.text}
 if (rsinj["status"] == "success"):
